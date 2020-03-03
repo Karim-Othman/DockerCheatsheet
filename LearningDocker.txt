@@ -14,3 +14,30 @@ systemctl enable docker
 
 5- Check docker status
 systemctl status docker
+
+6- Run Docker command without sudo every time
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+sudo service docker restart
+
+#Docker fundamentals
+1- Docker pull
+docker pull ubuntu ---> will consider to get the latest images in reg
+docker pull ubuntu:16.04 --> will get image with tag 16.04
+
+2- show docker images command
+docker images
+
+3- Run docker image (generate running container)
+docker run ubuntu:latest --> (where ubuntu is image name and latest is tag)
+or
+docker run 72300a873c2c --> where 72300a873c2c is image ID
+
+4- to show images without truncating its ID
+docker images --no-trunc
+
+5- Show docker containers
+docker ps
+
+6- show docker containers that isn't runing and exited
+docker ps -a
