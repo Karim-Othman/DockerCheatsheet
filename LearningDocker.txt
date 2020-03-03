@@ -1,0 +1,16 @@
+#Docker install on RHEL 8 
+1- install dependencies
+yum -y install lvm2 device-mapper device-mapper-persistent-data device-mapper-event device-mapper-libs device-mapper-event-libs
+
+2- Add Docker Repository
+curl https://download.docker.com/linux/centos/docker-ce.repo -o /etc/yum.repos.d/docker-ce.repo
+
+3- Install the Docker CE by skipping the unavailable package.
+sudo yum -y install docker-ce --nobest
+
+4- Start Docker service
+systemctl start docker
+systemctl enable docker
+
+5- Check docker status
+systemctl status docker
