@@ -39,5 +39,11 @@ docker images --no-trunc
 5- Show docker containers
 docker ps
 
-6- show docker containers that isn't runing and exited
+6- show docker containers that isn't running and exited
 docker ps -a
+
+#Docker file fundamentals
+--> Check dockerfile example in /
+docker build . ( where . represents to build using dockerfile in currnet folder)
+or
+docker build dockerfile (where dockerfile is docker file name)
